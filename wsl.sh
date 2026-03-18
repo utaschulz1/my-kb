@@ -6,7 +6,7 @@ du -h --max-depth=2 /home/hpz440 | sort -rh | head -20
 # C:\Users\<yourname>\AppData\Local\Packages\<DistroName>\LocalState\ext4.vhdx
 # This file contains the entire Linux filesystem, so it can grow very large if you have a lot of data in WSL. You can check its size in Windows Explorer or using PowerShell:
 # After deleting large files in WSL you need to compact it.
-
+# Close the WSL remote connection in VS Code and shutdown Docker desktop.
 
 ```powershell # with WSL2 version 1.2.0+
 wsl --version

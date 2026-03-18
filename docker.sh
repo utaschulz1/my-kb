@@ -4,6 +4,25 @@ docker system df
 # Clean up unused Docker resources
 docker system prune -a
 
+#===== Docker Desktop on Windows Cleanup ======
+# Clean up Docker resources on Windows (if using Docker Desktop) after cleaning up in WSL
+# Docker Desktop uses its own separate VHD (ext4.vhdx) stored in a different location:
+# "C:\Users\user\AppData\Local\Docker\wsl\disk\docker_data.vhdx" and "C:\Users\user\AppData\Local\Docker\wsl\data\ext4.vhdx"
+# Close Docker Desktop and kill processes in Task Manager
+```powershell
+diskpart
+```
+# In diskpart prompt:
+```
+select vdisk file="C:\Users\user\AppData\Local\Docker\wsl\disk\docker_data.vhdx" # Enter
+attach vdisk readonly # Enter
+compact vdisk # Enter
+detach vdisk # Enter
+exit
+```
+# ================================================
+# ================================================
+
 # Openclaw commands inside docker
 docker compose exec openclaw openclaw <command>
 
