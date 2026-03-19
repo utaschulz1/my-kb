@@ -26,8 +26,14 @@ git push -u origin main
 ```git remote set-url origin git@github.com:YOUR_USER/YOUR_REPO.git
 # then push if needed
 git push -u origin main
+#------------------------------------------
+#Only clone certain branch:
+git clone -b Charles https://github.com/your-username/your-repo.git
 
-------------------------------------------
+# Confirm
+git branch 
+
+#------------------------------------------
 # Inspect remotes
 git remote -v
 git remote show origin
