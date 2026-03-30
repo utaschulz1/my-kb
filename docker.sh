@@ -30,7 +30,7 @@ docker compose exec openclaw openclaw <command>
 docker compose pull openclaw && docker compose up -d openclaw
 
 # Add agent to openclaw
-docker compose exec openclaw openclaw agents add content-strategist
+docker compose exec openclaw openclaw agents add content-strategistf
 
 # Start the whole fortress in the background
 docker compose up -d
