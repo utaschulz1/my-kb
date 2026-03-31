@@ -30,9 +30,15 @@ git push -u origin main
 #Only clone certain branch:
 git clone -b Charles https://github.com/your-username/your-repo.git
 
-# Confirm
+# Confirm branch
 git branch 
-
+# Checkout branch and pull latest changes
+git checkout Charles
+git pull origin Charles
+# Merge changes into main
+git checkout main
+git merge Charles
+git push origin main
 #------------------------------------------
 # Inspect remotes
 git remote -v
