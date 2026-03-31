@@ -6,6 +6,9 @@ uv run pywrangler login
 # Deploy live:
 npm run deploy
 
+# see logs live while running the app
+npx wrangler tail
+
 # Or seed Miniflare's local R2 using wrangler. Makes a local SQLite db and serve them via the R2 binding during npm run dev. Do this once for all localfiles in R2:
 cd /home/hpz400/projects/Doublesession-scheduler/Cloudflare_app/doublesession-worker
 
@@ -20,3 +23,9 @@ npm run dev
 npx wrangler dev --remote
 # or
 uv run pywrangler dev --remote
+
+# Secret management:
+echo "123456" | npx wrangler secret put GITHUB_APP_ID
+echo "YOUR_INSTALLATION_ID" | npx wrangler secret put GITHUB_INSTALLATION_ID
+npx wrangler secret put GITHUB_APP_PRIVATE_KEY < ~/Downloads/your-new-key.pem
+
