@@ -33,11 +33,11 @@ git clone -b Charles https://github.com/your-username/your-repo.git
 # Confirm branch
 git branch 
 # Checkout branch and pull latest changes
-git checkout Charles
-git pull origin Charles
+git checkout BRANCHNAME
+git pull origin BRANCHNAME
 # Merge changes into main
 git checkout main
-git merge Charles
+git merge BRANCHNAME
 git push origin main
 #------------------------------------------
 # Inspect remotes
