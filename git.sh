@@ -82,3 +82,7 @@ tree_url = "https://api.github.com/repos/oasis-tcs/dita/git/trees/master?recursi
 data = requests.get(tree_url).json()
 
 ------------------------------------------------
+
+# History rewrite (use with caution)
+pip install git-filter-repo
+git filter-repo --path PATH_TO_REMOVE --invert-paths
