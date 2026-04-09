@@ -1,3 +1,9 @@
+# update package lists and upgrade installed packages
+sudo apt update          # refresh package lists
+sudo apt upgrade         # upgrade installed packages
+sudo apt update && sudo apt upgrade  # both
+
+
 # change file permissions: add execute permission to a script file
 chmod +x myscript.py
 ls -l # shows permissions, should have 'x' for execute
