@@ -38,5 +38,9 @@ Get-ChildItem -Path . -File
 # Get the content of a file
 Get-Content -Path "new_file.txt"
 
+#clean up WinSxS
+Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+# Using ResetBase is more powerful but absolutely locks you into your current Windows version (no "Rollback" possible).
+
 
 
