@@ -86,3 +86,13 @@ data = requests.get(tree_url).json()
 # History rewrite (use with caution)
 pip install git-filter-repo
 git filter-repo --path PATH_TO_REMOVE --invert-paths
+
+--------------------------------------------------
+# update sub-module pointer to latest commit
+# in directory that contains the submodule
+cd patent-translation-app
+# run:
+git add agent
+git commit -m "update submodule pointer to latest commit"
+git push
+# this updates the one stored SHA pointer to match wherever patent-translation-app/agent is currently pointing to. It does not update the submodule itself, which must be done separately.
